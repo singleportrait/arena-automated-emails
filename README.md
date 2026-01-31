@@ -56,6 +56,11 @@ Automatically sends a daily email with a randomly selected block from your Are.n
    npm run dev
    ```
 
+   You can also render a sample email in the browser, while still using the API data:
+   ```bash
+   npm run preview
+   ```
+
    **Note:** The app will automatically load your `.env` file when running locally. Make sure your `.env` file has all the required variables filled in.
 
 ### 4. GitHub Actions Setup
