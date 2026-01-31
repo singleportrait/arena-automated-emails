@@ -1,0 +1,42 @@
+name: Daily Email Automation
+
+on:
+  schedule:
+    # Run daily at 9:00 AM UTC
+    # To change the time, modify the cron expression: minute hour day month day-of-week
+    # Examples:
+    # - "0 9 * * *" = 9:00 AM UTC daily
+    # - "0 14 * * *" = 2:00 PM UTC (9:00 AM EST)
+    # - "0 17 * * *" = 5:00 PM UTC (12:00 PM EST)
+    - cron: '0 9 * * *'
+  workflow_dispatch: # Allow manual triggering from GitHub Actions UI
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build TypeScript
+        run: npm run build
+
+      - name: Send daily email
+        env:
+          ARENA_CHANNEL_SLUG: ${{ secrets.ARENA_CHANNEL_SLUG }}
+          ARENA_ACCESS_TOKEN: ${{ secrets.ARENA_ACCESS_TOKEN }}
+          MAILGUN_API_KEY: ${{ secrets.MAILGUN_API_KEY }}
+          MAILGUN_DOMAIN: ${{ secrets.MAILGUN_DOMAIN }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: npm start
