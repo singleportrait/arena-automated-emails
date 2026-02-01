@@ -1,6 +1,6 @@
 import formData from 'form-data';
 import Mailgun from 'mailgun.js';
-import { Block } from '../types/arena';
+import { Block, Channel } from '../types/arena';
 import { generateEmailTemplate } from '../templates/emailTemplate';
 
 export interface EmailConfig {
@@ -26,9 +26,9 @@ export class EmailService {
   /**
    * Send email via Mailgun
    */
-  async sendEmail(block: Block): Promise<void> {
+  async sendEmail(block: Block, channel: Channel): Promise<void> {
     try {
-      const html = generateEmailTemplate({ block });
+      const html = generateEmailTemplate({ block, channel });
       const recipients = Array.isArray(this.config.to) ? this.config.to : [this.config.to];
 
       console.log(`Preparing to send email to ${recipients.length} recipient(s)`);
@@ -58,11 +58,11 @@ export class EmailService {
   /**
    * Send email to multiple recipients
    */
-  async sendToMultipleRecipients(block: Block, recipients: string[]): Promise<void> {
+  async sendToMultipleRecipients(block: Block, channel: Channel, recipients: string[]): Promise<void> {
     const originalTo = this.config.to;
     this.config.to = recipients;
     try {
-      await this.sendEmail(block);
+      await this.sendEmail(block, channel);
     } finally {
       this.config.to = originalTo;
     }

@@ -66,8 +66,9 @@ async function main(): Promise<void> {
       to: parseEmailRecipients(process.env.EMAIL_TO!),
     });
 
-    // Fetch, filter, and select a random block
-    console.log('Step 1: Fetching and filtering blocks from Are.na...\n');
+    // Fetch channel metadata and blocks
+    console.log('Step 1: Fetching channel and blocks from Are.na...\n');
+    const channel = await arenaService.fetchChannel();
     const selectedBlock = await arenaService.getRandomRecentBlock();
 
     if (!selectedBlock) {
@@ -77,7 +78,7 @@ async function main(): Promise<void> {
     }
 
     console.log(`\nStep 2: Sending email with selected block...\n`);
-    await emailService.sendEmail(selectedBlock);
+    await emailService.sendEmail(selectedBlock, channel);
 
     console.log('\n' + '='.repeat(60));
     console.log('✅ Success! Email sent successfully.');

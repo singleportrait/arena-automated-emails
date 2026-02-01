@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-import { Block, ChannelContent } from '../types/arena';
+import { Block, Channel, ChannelContent } from '../types/arena';
 
 export class ArenaService {
   private client: AxiosInstance;
@@ -14,6 +14,27 @@ export class ArenaService {
         'Content-Type': 'application/json',
       },
     });
+  }
+
+  /**
+   * Fetch channel metadata from Are.na API
+   */
+  async fetchChannel(): Promise<Channel> {
+    try {
+      console.log(`Fetching channel metadata: ${this.channelSlug}`);
+      const response = await this.client.get<Channel>(
+        `/channels/${this.channelSlug}`
+      );
+      console.log(`Channel title: "${response.data.title}"`);
+      return response.data;
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        console.error('Are.na API error:', error.response?.status, error.response?.statusText);
+        console.error('Error details:', error.response?.data);
+        throw new Error(`Failed to fetch Are.na channel: ${error.message}`);
+      }
+      throw error;
+    }
   }
 
   /**

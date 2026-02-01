@@ -19,13 +19,14 @@ async function main(): Promise<void> {
     process.env.ARENA_CHANNEL_SLUG!
   );
 
+  const channel = await arenaService.fetchChannel();
   const block = await arenaService.getRandomRecentBlock();
   if (!block) {
     console.warn('No recent blocks found. Exiting.');
     process.exit(1);
   }
 
-  const html = generateEmailTemplate({ block });
+  const html = generateEmailTemplate({ block, channel });
   writeFileSync('preview.html', html);
 
   const cmd =

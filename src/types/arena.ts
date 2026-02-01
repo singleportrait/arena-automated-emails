@@ -4,6 +4,7 @@ export interface Connection {
   position: number;
   connected_by: {
     name: string;
+    slug: string;
   };
 }
 
@@ -24,19 +25,36 @@ export interface Block {
     alt_text?: string;
     large: {
       src: string;
+      width: number;
+      height: number;
     };
   } | null;
   source?: {
     url: string;
     title: string;
+    provider: {
+      name: string;
+    };
   } | null;
   base_type: string; // 'Block', 'Channel', etc.
   class: string;
   created_at: string;
   updated_at: string;
-  connection?: Connection | null;
+  connection: Connection;
 }
 
 export interface ChannelContent {
   data: Block[];
+}
+
+export interface Channel {
+  id: number;
+  title: string;
+  slug: string;
+  visibility: string;
+  owner: {
+    id: number;
+    slug: string;
+    name: string;
+  };
 }
