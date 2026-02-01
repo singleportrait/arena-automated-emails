@@ -43,6 +43,10 @@ export function generateEmailTemplate(data: EmailTemplateData): string {
 </head>
 <head>
   <style>
+    .source-provider a {
+      color: #777777 !important;
+      text-decoration: none !important;
+    }
     .rendered_html p {
       margin: 0;
     }
@@ -109,7 +113,7 @@ export function generateEmailTemplate(data: EmailTemplateData): string {
               <p style="margin: 0; margin-bottom: 10px; font-size: 14px; color: #777777;">
                 Source:
                 <a href="${sourceUrl}" style="color: #777777; text-decoration: underline; text-underline-offset: 2px;">${source?.title || escapeHtml(sourceUrl)}</a>
-                ${providerName? `(${providerName})` : ''}
+                ${providerName? `<span class="source-provider">(${providerName})</span>` : ''}
               </p>
               ` : ''}
 
@@ -128,23 +132,6 @@ export function generateEmailTemplate(data: EmailTemplateData): string {
             </td>
           </tr>
 
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td style="padding: 0 16px 16px;">
-        <table role="presentation" style="width: 100%; max-width: 600px; margin: 0 auto; background-color: #eeeeee; border-radius: 20px; box-shadow: 0 2px 4px rgba(9, 7, 7, 0.1); color: #777777;">
-          <!-- Footer -->
-          <tr>
-            <td style="padding: 24px; font-size: 12px; text-align: center; line-height: 1.5;">
-              <p style="margin: 0; margin-bottom: 10px;">
-                This email was automatically generated from your Are.na channel, finding 1 random block from the last 24 hours. This email is sent via a custom script in <a href="https://github.com/singleportrait/arena-automated-emails" style="color: #777777; text-decoration: underline; text-underline-offset: 2px;">this Github repository</a>. *Unsubscribe here*.
-              </p>
-              <p style="margin: 0;">
-                ♡
-              </p>
-            </td>
-          </tr>
         </table>
       </td>
     </tr>
