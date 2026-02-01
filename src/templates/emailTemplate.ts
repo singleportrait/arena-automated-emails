@@ -138,7 +138,7 @@ export function generateEmailTemplate(data: EmailTemplateData): string {
           <tr>
             <td style="padding: 24px; font-size: 12px; text-align: center; line-height: 1.5;">
               <p style="margin: 0; margin-bottom: 10px;">
-                This email was automatically generated from your Are.na channel, finding 1 random block from the last 24 hours. This email is sent via a custom script in *this Github repository*. *Unsubscribe here*.
+                This email was automatically generated from your Are.na channel, finding 1 random block from the last 24 hours. This email is sent via a custom script in <a href="https://github.com/singleportrait/arena-automated-emails" style="color: #777777; text-decoration: underline; text-underline-offset: 2px;">this Github repository</a>. *Unsubscribe here*.
               </p>
               <p style="margin: 0;">
                 ♡
