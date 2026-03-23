@@ -22,13 +22,11 @@ async function main(): Promise<void> {
 
   const channel = await arenaService.fetchChannel();
   const block = await arenaService.getRandomRecentBlock();
-  if (!block) {
-    const html = generateNoBlocksEmailTemplate({ channel });
-    writeFileSync('preview.html', html);
-    process.exit(1);
-  }
 
-  const html = generateEmailTemplate({ block, channel });
+  const html = block
+    ? generateEmailTemplate({ block, channel })
+    : generateNoBlocksEmailTemplate({ channel });
+
   writeFileSync('preview.html', html);
 
   const cmd =
@@ -39,7 +37,9 @@ async function main(): Promise<void> {
         : 'xdg-open';
   exec(`${cmd} preview.html`);
 
-  console.log(`Preview generated for: ${block.title || 'Untitled'}`);
+  console.log(
+    `Preview generated for: ${block ? block.title || 'Untitled block' : 'Fallback no blocks template'}`,
+  );
 }
 
 main();
