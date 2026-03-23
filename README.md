@@ -29,56 +29,42 @@ Automatically sends a daily email with a randomly selected block from your Are.n
 ### 3. Local Development
 
 1. Copy `.env.example` to `.env`:
-   ```bash
+  ```bash
    cp .env.example .env
-   ```
-
+  ```
 2. Fill in your credentials in `.env`
-
 3. Install dependencies:
-   ```bash
+  ```bash
    npm install
-   ```
-
+  ```
 4. Build TypeScript:
-   ```bash
+  ```bash
    npm run build
-   ```
-
+  ```
 5. Run locally to test:
-   ```bash
+  ```bash
    npm run build
    npm start
-   ```
-
+  ```
    Or use `ts-node` for development (no build step needed):
-   ```bash
-   npm run dev
-   ```
-
    You can also render a sample email in the browser, while still using the API data:
    ```bash
    npm run preview
    ```
-
    **Note:** The app will automatically load your `.env` file when running locally. Make sure your `.env` file has all the required variables filled in.
 
 ### 4. GitHub Actions Setup
 
 1. Push this repository to GitHub
-
 2. Go to your repository → Settings → Secrets and variables → Actions
-
 3. Add the following secrets:
-   - `ARENA_CHANNEL_SLUG` - Your Are.na channel slug (e.g., `yuppie-dystopia`)
-   - `ARENA_ACCESS_TOKEN` - Your Are.na API access token
-   - `MAILGUN_API_KEY` - Your Mailgun API key
-   - `MAILGUN_DOMAIN` - Your Mailgun domain (e.g., `mg.yourdomain.com`)
-   - `EMAIL_FROM` - Sender email address
-   - `EMAIL_TO` - Recipient email(s), comma-separated for multiple
-
+  - `ARENA_CHANNEL_SLUG` - Your Are.na channel slug (e.g., `yuppie-dystopia`)
+  - `ARENA_ACCESS_TOKEN` - Your Are.na API access token
+  - `MAILGUN_API_KEY` - Your Mailgun API key
+  - `MAILGUN_DOMAIN` - Your Mailgun domain (e.g., `mg.yourdomain.com`)
+  - `EMAIL_FROM` - Sender email address
+  - `EMAIL_TO` - Recipient email(s), comma-separated for multiple
 4. The workflow will run automatically daily at 9:00 AM UTC
-
 5. To test manually, go to Actions → Daily Email Automation → Run workflow
 
 ## Configuration
@@ -94,6 +80,7 @@ Edit `.github/workflows/daily-email.yml` and modify the cron expression:
 Cron format: `minute hour day month day-of-week`
 
 Examples:
+
 - `0 9 * * *` = 9:00 AM UTC daily
 - `0 14 * * *` = 2:00 PM UTC (9:00 AM EST)
 - `0 17 * * *` = 5:00 PM UTC (12:00 PM EST)
@@ -101,6 +88,7 @@ Examples:
 ### Multiple Recipients
 
 Set `EMAIL_TO` to a comma-separated list. You can also use a Mailgun Mailing List email, so the recipients are controlled by Mailgun.
+
 ```
 EMAIL_TO=user1@example.com,user2@example.com,user3@example.com
 ```
@@ -131,8 +119,8 @@ arena-email-automations/
 
 1. **Fetch**: Retrieves all channel contents from Are.na API
 2. **Filter**: Filters blocks where:
-   - `base_type === 'Block'`
-   - `connection.connected_at` is within the last 24 hours
+  - `base_type === 'Block'`
+  - `connection.connected_at` is within the last 24 hours
 3. **Select**: Randomly selects one block from filtered results
 4. **Generate**: Creates HTML email with block content
 5. **Send**: Sends email via Mailgun to configured recipients
@@ -140,9 +128,11 @@ arena-email-automations/
 ## Logs
 
 All logs are automatically captured by GitHub Actions. View them in:
+
 - Repository → Actions → Daily Email Automation → [Latest run] → Send daily email
 
 Logs include:
+
 - API fetch status
 - Filtering results
 - Selected block details
@@ -153,14 +143,16 @@ Logs include:
 ### No blocks found
 
 If you see "No matching blocks found", it means:
+
 - No blocks with `base_type === 'Block'` in the channel, OR
 - No blocks were connected within the last 24 hours
 
-The script will exit gracefully without sending an email.
+The script will send a 'no blocks found' fallback email.
 
 ### Email not sending
 
 Check:
+
 1. Mailgun API key and domain are correct
 2. Sender email is verified in Mailgun
 3. Recipient email is valid
@@ -169,6 +161,7 @@ Check:
 ### API errors
 
 If Are.na API fails:
+
 1. Verify your access token is correct
 2. Check channel slug is correct
 3. Ensure the channel is accessible with your token
