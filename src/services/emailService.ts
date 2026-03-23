@@ -2,6 +2,7 @@ import formData from 'form-data';
 import Mailgun from 'mailgun.js';
 import { Block, Channel } from '../types/arena';
 import { generateEmailTemplate } from '../templates/emailTemplate';
+import { generateNoBlocksEmailTemplate } from '../templates/noBlocksEmailTemplate';
 
 export interface EmailConfig {
   apiKey: string;
@@ -26,23 +27,35 @@ export class EmailService {
   /**
    * Send email via Mailgun
    */
-  async sendEmail(block: Block, channel: Channel): Promise<void> {
+  async sendEmail(channel: Channel, block?: Block): Promise<void> {
     try {
-      const html = generateEmailTemplate({ block, channel });
-      const recipients = Array.isArray(this.config.to) ? this.config.to : [this.config.to];
+      console.log('Selected block', block);
+      const html = block
+        ? generateEmailTemplate({ block, channel })
+        : generateNoBlocksEmailTemplate({ channel });
+      const recipients = Array.isArray(this.config.to)
+        ? this.config.to
+        : [this.config.to];
 
-      console.log(`Preparing to send email to ${recipients.length} recipient(s)`);
+      console.log(
+        `Preparing to send email to ${recipients.length} recipient(s)`,
+      );
 
       const messageData = {
         from: this.config.from,
         to: recipients,
-        subject: `Daily Are.na: ${block.title || 'Untitled Block'}`,
+        subject: `Daily Are.na: ${block ? block.title || 'Untitled Block' : 'No new posts today!'}`,
         html: html,
       };
 
-      console.log(`Sending email via Mailgun (domain: ${this.config.domain})...`);
+      console.log(
+        `Sending email via Mailgun (domain: ${this.config.domain})...`,
+      );
 
-      const response = await this.mailgunClient.messages.create(this.config.domain, messageData);
+      const response = await this.mailgunClient.messages.create(
+        this.config.domain,
+        messageData,
+      );
 
       console.log(`Email sent successfully! Message ID: ${response.id}`);
       console.log(`Recipients: ${recipients.join(', ')}`);
@@ -58,11 +71,15 @@ export class EmailService {
   /**
    * Send email to multiple recipients
    */
-  async sendToMultipleRecipients(block: Block, channel: Channel, recipients: string[]): Promise<void> {
+  async sendToMultipleRecipients(
+    block: Block,
+    channel: Channel,
+    recipients: string[],
+  ): Promise<void> {
     const originalTo = this.config.to;
     this.config.to = recipients;
     try {
-      await this.sendEmail(block, channel);
+      await this.sendEmail(channel, block);
     } finally {
       this.config.to = originalTo;
     }

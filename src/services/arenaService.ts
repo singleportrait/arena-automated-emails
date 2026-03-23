@@ -65,6 +65,7 @@ export class ArenaService {
    */
   filterRecentBlocks(blocks: Block[]): Block[] {
     const now = new Date();
+    // const tenSecondsAgo = new Date(now.getTime() - 10 * 1000);
     const twentyFourHoursAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
 
     const filtered = blocks.filter((block) => {
@@ -82,7 +83,9 @@ export class ArenaService {
       return connectedAt >= twentyFourHoursAgo && connectedAt <= now;
     });
 
-    console.log(`Filtered ${filtered.length} blocks from ${blocks.length} total (base_type=Block, connected within 24h)`);
+    console.log(
+      `Filtered ${filtered.length} blocks from ${blocks.length} total (base_type=Block, connected within 24h)`,
+    );
     return filtered;
   }
 

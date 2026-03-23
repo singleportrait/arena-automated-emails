@@ -78,7 +78,7 @@ async function main(): Promise<void> {
     }
 
     console.log(`\nStep 2: Sending email with selected block...\n`);
-    await emailService.sendEmail(selectedBlock, channel);
+    await emailService.sendEmail(channel, selectedBlock);
 
     console.log('\n' + '='.repeat(60));
     console.log('✅ Success! Email sent successfully.');

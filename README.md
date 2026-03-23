@@ -100,7 +100,7 @@ Examples:
 
 ### Multiple Recipients
 
-Set `EMAIL_TO` to a comma-separated list:
+Set `EMAIL_TO` to a comma-separated list. You can also use a Mailgun Mailing List email, so the recipients are controlled by Mailgun.
 ```
 EMAIL_TO=user1@example.com,user2@example.com,user3@example.com
 ```
