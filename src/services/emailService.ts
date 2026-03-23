@@ -41,10 +41,14 @@ export class EmailService {
         `Preparing to send email to ${recipients.length} recipient(s)`,
       );
 
+      const subject = block
+        ? block.title || (block.type === 'Text' ? 'Text' : 'Untitled')
+        : 'No new posts today!';
+
       const messageData = {
         from: this.config.from,
         to: recipients,
-        subject: `Daily Are.na: ${block ? block.title || 'Untitled Block' : 'No new posts today!'}`,
+        subject: `Daily Are.na: ${subject}`,
         html: html,
       };
 

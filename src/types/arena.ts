@@ -16,6 +16,7 @@ export interface TextContent {
 export interface Block {
   id: number;
   title: string | null;
+  type: string;
   description?: TextContent;
   content?: TextContent;
   image?: {
