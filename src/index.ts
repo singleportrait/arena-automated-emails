@@ -72,13 +72,15 @@ async function main(): Promise<void> {
     const selectedBlock = await arenaService.getRandomRecentBlock();
 
     if (!selectedBlock) {
-      console.warn('⚠️  No matching blocks found (base_type=Block, connected within 24h)');
-      console.warn('Skipping email send.');
-      process.exit(0);
+      console.log(
+        '⚠️  No matching blocks found (base_type=Block, connected within 24h)',
+      );
+      console.log('\nStep 2: Sending email with no blocks...\n');
+    } else {
+      console.log(`\nStep 2: Sending email with selected block...\n`);
     }
 
-    console.log(`\nStep 2: Sending email with selected block...\n`);
-    await emailService.sendEmail(selectedBlock, channel);
+    await emailService.sendEmail(channel, selectedBlock ?? undefined);
 
     console.log('\n' + '='.repeat(60));
     console.log('✅ Success! Email sent successfully.');

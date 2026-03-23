@@ -82,7 +82,9 @@ export class ArenaService {
       return connectedAt >= twentyFourHoursAgo && connectedAt <= now;
     });
 
-    console.log(`Filtered ${filtered.length} blocks from ${blocks.length} total (base_type=Block, connected within 24h)`);
+    console.log(
+      `Filtered ${filtered.length} blocks from ${blocks.length} total (base_type=Block, connected within 24h)`,
+    );
     return filtered;
   }
 

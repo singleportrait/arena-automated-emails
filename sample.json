@@ -1,0 +1,274 @@
+{
+  "data": [
+    {
+      "id": 43161803,
+      "type": "Text",
+      "created_at": "2026-01-31T00:07:11Z",
+      "updated_at": "2026-01-31T00:07:11Z",
+      "base_type": "Block",
+      "title": null,
+      "description": null,
+      "state": "available",
+      "visibility": "private",
+      "comment_count": 0,
+      "user": {
+        "id": 72930,
+        "type": "User",
+        "name": "Jenn Scheer",
+        "slug": "jenn-scheer",
+        "avatar": null,
+        "initials": "JS"
+      },
+      "source": null,
+      "content": {
+        "markdown": "welcome to the friend zone :)",
+        "html": "<p>welcome to the friend zone :)</p>",
+        "plain": "welcome to the friend zone :)"
+      },
+      "_links": {
+        "self": {
+          "href": "https://api.are.na/v3/blocks/43161803"
+        },
+        "user": {
+          "href": "https://api.are.na/v3/users/jenn-scheer"
+        },
+        "connections": {
+          "href": "https://api.are.na/v3/blocks/43161803/connections"
+        },
+        "comments": {
+          "href": "https://api.are.na/v3/blocks/43161803/comments"
+        }
+      },
+      "connection": {
+        "id": 90794410,
+        "position": 1,
+        "pinned": false,
+        "connected_at": "2026-01-31T00:07:11Z",
+        "connected_by": {
+          "id": 72930,
+          "type": "User",
+          "name": "Jenn Scheer",
+          "slug": "jenn-scheer",
+          "avatar": null,
+          "initials": "JS",
+          "_links": {
+            "self": {
+              "href": "https://api.are.na/v3/users/jenn-scheer"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 43053987,
+      "type": "Link",
+      "created_at": "2026-01-28T02:58:30Z",
+      "updated_at": "2026-01-31T00:07:36Z",
+      "base_type": "Block",
+      "title": "Games of Chance – ZORA ZINE",
+      "description": {
+        "markdown": "A letter from the Editors of Zine.",
+        "html": "<p>A letter from the Editors of Zine.</p>",
+        "plain": "A letter from the Editors of Zine."
+      },
+      "state": "available",
+      "visibility": "public",
+      "comment_count": 0,
+      "user": {
+        "id": 72930,
+        "type": "User",
+        "name": "Jenn Scheer",
+        "slug": "jenn-scheer",
+        "avatar": null,
+        "initials": "JS"
+      },
+      "source": {
+        "url": "https://zine.zora.co/games-of-chance",
+        "title": "Games of Chance – ZORA ZINE",
+        "provider": {
+          "name": "zine.zora.co",
+          "url": "https://zine.zora.co"
+        }
+      },
+      "image": {
+        "alt_text": null,
+        "blurhash": "LIBf@GoL01WC?aj[D%WCx^j[xtj@",
+        "width": 1200,
+        "height": 900,
+        "aspect_ratio": 1.3333,
+        "content_type": "image/png",
+        "filename": "619f68aa608e87744e189a3cd302c1e4.png",
+        "file_size": 2392516,
+        "updated_at": "2026-01-28T02:59:01Z",
+        "small": {
+          "src": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzA1Mzk4Ny9vcmlnaW5hbF82MTlmNjhhYTYwOGU4Nzc0NGUxODlhM2NkMzAyYzFlNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=",
+          "src_2x": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzA1Mzk4Ny9vcmlnaW5hbF82MTlmNjhhYTYwOGU4Nzc0NGUxODlhM2NkMzAyYzFlNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwMCwiaGVpZ2h0Ijo4MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=",
+          "width": 400,
+          "height": 300
+        },
+        "medium": {
+          "src": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzA1Mzk4Ny9vcmlnaW5hbF82MTlmNjhhYTYwOGU4Nzc0NGUxODlhM2NkMzAyYzFlNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==",
+          "src_2x": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzA1Mzk4Ny9vcmlnaW5hbF82MTlmNjhhYTYwOGU4Nzc0NGUxODlhM2NkMzAyYzFlNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI0MDAsImhlaWdodCI6MjQwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==",
+          "width": 1200,
+          "height": 900
+        },
+        "large": {
+          "src": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzA1Mzk4Ny9vcmlnaW5hbF82MTlmNjhhYTYwOGU4Nzc0NGUxODlhM2NkMzAyYzFlNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==",
+          "src_2x": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzA1Mzk4Ny9vcmlnaW5hbF82MTlmNjhhYTYwOGU4Nzc0NGUxODlhM2NkMzAyYzFlNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjM2MDAsImhlaWdodCI6MzYwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==",
+          "width": 1800,
+          "height": 1350
+        },
+        "square": {
+          "src": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzA1Mzk4Ny9vcmlnaW5hbF82MTlmNjhhYTYwOGU4Nzc0NGUxODlhM2NkMzAyYzFlNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==",
+          "src_2x": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzA1Mzk4Ny9vcmlnaW5hbF82MTlmNjhhYTYwOGU4Nzc0NGUxODlhM2NkMzAyYzFlNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI0MDAsImhlaWdodCI6MjQwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==",
+          "width": 1200,
+          "height": 900
+        }
+      },
+      "content": null,
+      "_links": {
+        "self": {
+          "href": "https://api.are.na/v3/blocks/43053987"
+        },
+        "user": {
+          "href": "https://api.are.na/v3/users/jenn-scheer"
+        },
+        "connections": {
+          "href": "https://api.are.na/v3/blocks/43053987/connections"
+        },
+        "comments": {
+          "href": "https://api.are.na/v3/blocks/43053987/comments"
+        }
+      },
+      "connection": {
+        "id": 90794442,
+        "position": 2,
+        "pinned": false,
+        "connected_at": "2026-01-31T00:07:36Z",
+        "connected_by": {
+          "id": 72930,
+          "type": "User",
+          "name": "Jenn Scheer",
+          "slug": "jenn-scheer",
+          "avatar": null,
+          "initials": "JS",
+          "_links": {
+            "self": {
+              "href": "https://api.are.na/v3/users/jenn-scheer"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 43161840,
+      "type": "Link",
+      "created_at": "2026-01-31T00:09:04Z",
+      "updated_at": "2026-01-31T00:09:15Z",
+      "base_type": "Block",
+      "title": "\"What Is Going to Happen?\" - by Hamilton Nolan",
+      "description": {
+        "markdown": "How to reject a new normal.",
+        "html": "<p>How to reject a new normal.</p>",
+        "plain": "How to reject a new normal."
+      },
+      "state": "available",
+      "visibility": "private",
+      "comment_count": 0,
+      "user": {
+        "id": 72930,
+        "type": "User",
+        "name": "Jenn Scheer",
+        "slug": "jenn-scheer",
+        "avatar": null,
+        "initials": "JS"
+      },
+      "source": {
+        "url": "https://substack.com/home/post/p-184951192",
+        "title": "\"What Is Going to Happen?\" - by Hamilton Nolan",
+        "provider": {
+          "name": "substack.com",
+          "url": "https://substack.com"
+        }
+      },
+      "image": {
+        "alt_text": null,
+        "blurhash": "LVRMMOad~q%Ns:WBWBt7_NkDDiV@",
+        "width": 2560,
+        "height": 2560,
+        "aspect_ratio": 1,
+        "content_type": "image/png",
+        "filename": "90ae3f3640cbab2933e899561218c004.png",
+        "file_size": 1823263,
+        "updated_at": "2026-01-31T00:09:14Z",
+        "small": {
+          "src": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzE2MTg0MC9vcmlnaW5hbF85MGFlM2YzNjQwY2JhYjI5MzNlODk5NTYxMjE4YzAwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=",
+          "src_2x": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzE2MTg0MC9vcmlnaW5hbF85MGFlM2YzNjQwY2JhYjI5MzNlODk5NTYxMjE4YzAwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwMCwiaGVpZ2h0Ijo4MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=",
+          "width": 400,
+          "height": 400
+        },
+        "medium": {
+          "src": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzE2MTg0MC9vcmlnaW5hbF85MGFlM2YzNjQwY2JhYjI5MzNlODk5NTYxMjE4YzAwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==",
+          "src_2x": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzE2MTg0MC9vcmlnaW5hbF85MGFlM2YzNjQwY2JhYjI5MzNlODk5NTYxMjE4YzAwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI0MDAsImhlaWdodCI6MjQwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==",
+          "width": 1200,
+          "height": 1200
+        },
+        "large": {
+          "src": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzE2MTg0MC9vcmlnaW5hbF85MGFlM2YzNjQwY2JhYjI5MzNlODk5NTYxMjE4YzAwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==",
+          "src_2x": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzE2MTg0MC9vcmlnaW5hbF85MGFlM2YzNjQwY2JhYjI5MzNlODk5NTYxMjE4YzAwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjM2MDAsImhlaWdodCI6MzYwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==",
+          "width": 1800,
+          "height": 1800
+        },
+        "square": {
+          "src": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzE2MTg0MC9vcmlnaW5hbF85MGFlM2YzNjQwY2JhYjI5MzNlODk5NTYxMjE4YzAwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==",
+          "src_2x": "https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0MzE2MTg0MC9vcmlnaW5hbF85MGFlM2YzNjQwY2JhYjI5MzNlODk5NTYxMjE4YzAwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjI0MDAsImhlaWdodCI6MjQwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==",
+          "width": 1200,
+          "height": 1200
+        }
+      },
+      "content": null,
+      "_links": {
+        "self": {
+          "href": "https://api.are.na/v3/blocks/43161840"
+        },
+        "user": {
+          "href": "https://api.are.na/v3/users/jenn-scheer"
+        },
+        "connections": {
+          "href": "https://api.are.na/v3/blocks/43161840/connections"
+        },
+        "comments": {
+          "href": "https://api.are.na/v3/blocks/43161840/comments"
+        }
+      },
+      "connection": {
+        "id": 90794486,
+        "position": 3,
+        "pinned": false,
+        "connected_at": "2026-01-31T00:09:04Z",
+        "connected_by": {
+          "id": 72930,
+          "type": "User",
+          "name": "Jenn Scheer",
+          "slug": "jenn-scheer",
+          "avatar": null,
+          "initials": "JS",
+          "_links": {
+            "self": {
+              "href": "https://api.are.na/v3/users/jenn-scheer"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "current_page": 1,
+    "next_page": null,
+    "prev_page": null,
+    "per_page": 25,
+    "total_pages": 1,
+    "total_count": 3,
+    "has_more_pages": false
+  }
+}
