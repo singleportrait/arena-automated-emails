@@ -18,7 +18,7 @@ export function generateNoBlocksEmailTemplate(data: EmailTemplateData): string {
           <!-- Main Content -->
           <tr>
             <td style="padding: 0 24px 24px;">
-              <div class="rendered_html" style="display: block; margin: 0; margin-bottom: 24px; font-size: 14px; line-height: 1.5; border: 1px dashed #222222; padding: 24px; text-align: center; aspect-ratio: 1/1; display: flex; justify-content: center; align-items: center; text-decoration: none; color: #222222;">
+              <div class="rendered_html" style="display: block; margin: 0; margin-bottom: 24px; font-size: 14px; line-height: 1.5; border: 1px dashed #222222; padding: 24px; text-align: center; aspect-ratio: 1/1; color: #222222;">
                 No new posts today!
               </div>
 

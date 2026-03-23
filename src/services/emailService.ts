@@ -43,7 +43,7 @@ export class EmailService {
 
       const subject = block
         ? block.title || (block.type === 'Text' ? 'Text' : 'Untitled')
-        : 'No new posts today!';
+        : 'No new posts today :)';
 
       const messageData = {
         from: this.config.from,
